@@ -54,8 +54,8 @@ hide_decoration_bar_style = '''
 st.markdown(hide_decoration_bar_style, unsafe_allow_html=True)
 
 
-st.title('MovRec System')
-selected_movie = st.selectbox('Type a Movie', options=titles)
+st.title('JerryRecommends')
+selected_movie = st.selectbox('Your Movie', options=titles)
 if st.button('Recommend'):
     recommended_movie_names, recommended_movie_posters = recommender(selected_movie)
 
