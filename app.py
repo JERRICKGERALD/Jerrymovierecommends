@@ -5,15 +5,15 @@ from sklearn.metrics.pairwise import cosine_similarity
 import pickle
 import requests
 
-# df = pickle.load(open('movies.pkl', 'rb'))
+
 df = pd.read_csv('data.csv')
 titles = df['title'].values
 cv = CountVectorizer(max_features=5000, stop_words='english')
 vectors = cv.fit_transform(df['tags']).toarray()
 similarity = cosine_similarity(vectors)
-# similarity = pickle.load(open('similarity.pkl', 'rb'))
 
-API_KEY_AUTH = "b8c96e534866701532768a313b978c8b"
+
+API_KEY_AUTH = "8265bd1679663a7ea12ac168da84d2e8"
 
 
 def fetch_poster(movie_id):
